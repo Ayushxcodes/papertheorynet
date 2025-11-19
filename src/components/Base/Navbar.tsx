@@ -52,7 +52,7 @@ const NavApp = () => {
 
   return ( 
       <CardNav
-        logo="/logo.svg"
+        logo="/logo_new.png"
         logoAlt="Company Logo"
         items={items}
         baseColor="#fff"

@@ -1,5 +1,7 @@
 'use client';
+import CircularGallerySection from "@/components/Landing/CircularGallerySection";
 import SimpleHero from "@/components/Landing/HeroSection";
+import PolicySection from "@/components/Landing/PolicySection";
 import Plasma from "@/components/Plasma";
 import React from "react";
 
@@ -21,6 +23,8 @@ const Homepage = () => {
 
       {/* 🔻 Page Content */}
       <SimpleHero />
+      <CircularGallerySection/>
+      <PolicySection/>
     </div>
   );
 };
