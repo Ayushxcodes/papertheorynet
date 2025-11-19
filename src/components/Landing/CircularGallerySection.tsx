@@ -5,7 +5,7 @@ import CircularGallery from "@/components/CircularGallery";
 export default function CircularGallerySection() {
   return (
     <section className="relative w-full py-20 flex justify-center items-center overflow-hidden">
-      <div className="relative w-full max-w-6xl h-[600px]">
+      <div className="relative w-full h-[60vh] sm:h-[500px] md:h-[600px]">
         <CircularGallery
           bend={3} // controls curvature
           textColor="#ffffff"

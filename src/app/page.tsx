@@ -24,7 +24,7 @@ const Homepage = () => {
       {/* 🔻 Page Content */}
       <SimpleHero />
       <CircularGallerySection/>
-      <PolicySection/>
+  
     </div>
   );
 };
