@@ -5,6 +5,7 @@ import SplitText from "@/components/SplitText";
 import CircularText from "@/components/CircularText";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import TrueFocus from "@/components/TrueFocus";
 
 // Precompute offsets outside the component to avoid impure functions in render
 const IMAGES = [
@@ -98,7 +99,7 @@ export default function HeroSection() {
       </div>
 
       {/* RIGHT IMAGE STACK */}
-      <div className="hidden md:flex w-1/2 h-full relative justify-center items-center mt-10 md:mt-0">
+      <div className="hidden md:flex left-10 w-1/2 h-full relative justify-center items-center mt-10 md:mt-0">
         {IMAGES.map((img, index) => {
           const { x, y, rotate } = OFFSETS[index];
           const isTop = index === currentIndex;
@@ -121,6 +122,18 @@ export default function HeroSection() {
             />
           );
         })}
+      </div>
+
+      {/* TRUE FOCUS COMPONENT AT BOTTOM */}
+      <div className="w-full flex justify-center mt-16 md:mt-20">
+        <TrueFocus
+          sentence="True Focus"
+          manualMode={false}
+          blurAmount={5}
+          borderColor="red"
+          animationDuration={2}
+          pauseBetweenAnimations={1}
+        />
       </div>
     </section>
   );
