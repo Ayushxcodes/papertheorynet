@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useRef, useEffect } from "react";
 
 const SyncScrollPolicy = () => {
@@ -7,39 +9,59 @@ const SyncScrollPolicy = () => {
 
   const policyPoints = [
     {
-      title: "Data Privacy Protection",
+      title: "Policy Research & Advisory",
       description:
-        "We prioritize the security and confidentiality of your personal information with industry-leading encryption standards.",
+        "We decode policy challenges through rigorous research and stakeholder mapping, helping governments and institutions design programs that are efficient, inclusive, and future-ready. Policy with purpose. Governance with clarity.",
+      subpoints: [
+        "Digital Infrastructure",
+        "Media and Entertainment",
+        "Cyber Security",
+        "Clean Energy",
+        "Rural Development",
+        "Smart Village Solution",
+      ],
       image:
-        "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1581091870621-3d8c79d11c16?w=800&h=600&fit=crop",
     },
     {
-      title: "Transparent Operations",
+      title: "Election & Campaign Management",
       description:
-        "Our commitment to transparency ensures you always know how your data is being used and protected.",
+        "From ground-level data to narrative strategy, we design end-to-end election campaigns that resonate with people — not just voters. Emotion meets precision. Strategy meets trust.",
+      subpoints: [
+        "Candidate Profiling",
+        "Surveys",
+        "Events",
+        "Audio Visual Communication",
+        "Pain Point Analysis and Delivery",
+        "Digital Media Amplification",
+        "Public and Media Relation",
+      ],
       image:
-        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1598300055533-b15b0f2e7c63?w=800&h=600&fit=crop",
     },
     {
-      title: "User Control & Rights",
+      title: "Data Intelligence & Analytics",
       description:
-        "You maintain full control over your information with the ability to access, modify, or delete your data at any time.",
+        "We use behavioral data, survey insights, and sentiment analysis to build predictive models for policy outcomes, voter behavior, and campaign optimization. Numbers with a heartbeat.",
+      subpoints: [],
       image:
-        "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1564866657312-9f7ec1b4f14b?w=800&h=600&fit=crop",
     },
     {
-      title: "Secure Infrastructure",
+      title: "Government Project Management",
       description:
-        "Our systems are built on enterprise-grade security infrastructure with regular audits and compliance checks.",
+        "We partner with ministries, departments, and agencies to manage and execute projects that deliver tangible results. Our approach ensures accountability, agility, and alignment with long-term goals. Delivering governance that works.",
+      subpoints: [],
       image:
-        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1581093588401-2b89f3cf1d39?w=800&h=600&fit=crop",
     },
     {
-      title: "Compliance Standards",
+      title: "Strategic Communication Design",
       description:
-        "We adhere to international data protection regulations including GDPR, CCPA, and other regional standards.",
+        "We craft narratives that make governance relatable. From citizen campaigns to awareness films, our creative strategies simplify complexity and connect emotionally. Because good governance deserves good storytelling.",
+      subpoints: [],
       image:
-        "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1591696205602-17b6f2d9ff10?w=800&h=600&fit=crop",
     },
   ];
 
@@ -84,34 +106,34 @@ const SyncScrollPolicy = () => {
         </style>
         <div className="p-6 md:p-12">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Our Policies
+            Our Services
           </h1>
           <p className="text-md md:text-lg text-gray-400 mb-8 md:mb-12">
-            Understanding our commitment to your security and privacy
+            Empowering governance, campaigns, and data-driven decisions.
           </p>
 
           {policyPoints.map((point, index) => (
             <div
               key={index}
-              className={`p-4 md:p-6 rounded-lg border-2 transition-all duration-300 mb-6 md:mb-12 flex items-center min-h-[200px] md:h-[calc(100vh-200px)] ${
+              className={`p-4 md:p-6 rounded-lg border-2 transition-all duration-300 mb-6 md:mb-12 flex flex-col min-h-[200px] md:h-[calc(100vh-200px)] ${
                 activeIndex === index
                   ? "border-purple-500 shadow-lg"
                   : "border-gray-700"
               }`}
             >
-              <div className="flex items-start w-full">
-                <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold mr-4">
-                  {index + 1}
-                </div>
-                <div className="flex-1">
-                  <h2 className="text-xl md:text-2xl font-bold text-gray-100 mb-2 md:mb-3">
-                    {point.title}
-                  </h2>
-                  <p className="text-gray-300 leading-relaxed">
-                    {point.description}
-                  </p>
-                </div>
-              </div>
+              <h2 className="text-xl md:text-2xl font-bold text-gray-100 mb-2 md:mb-3">
+                {point.title}
+              </h2>
+              <p className="text-gray-300 leading-relaxed mb-2">
+                {point.description}
+              </p>
+              {point.subpoints.length > 0 && (
+                <ul className="list-disc list-inside text-gray-400 mt-2">
+                  {point.subpoints.map((sub, i) => (
+                    <li key={i}>{sub}</li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>

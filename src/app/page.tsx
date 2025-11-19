@@ -7,9 +7,9 @@ import React from "react";
 const Homepage = () => {
   return (
     <div
-      className="relative w-full min-h-screen bg-black bg-opacity-90"
+      className="relative w-full min-h-screen bg-white bg-opacity-90"
       style={{
-        backgroundImage: "url('./background.jpg')",
+        backgroundImage: "url('./vector.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
