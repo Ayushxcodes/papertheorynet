@@ -37,13 +37,13 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen flex items-center justify-between px-10 text-white overflow-hidden">
+    <section className="relative w-full min-h-screen md:h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-10 text-white overflow-hidden pt-20 md:pt-0">
       {/* LEFT CONTENT */}
-      <div className="max-w-xl relative z-10 flex flex-col gap-10">
+      <div className="max-w-xl relative z-10 flex flex-col gap-8 md:gap-10">
         <div>
           <SplitText
             text="Reimagining Governance. Engineering Impact."
-            className="text-5xl font-bold leading-tight"
+            className="text-4xl md:text-5xl font-bold leading-tight"
             delay={100}
             duration={0.6}
             ease="power3.out"
@@ -57,7 +57,7 @@ export default function HeroSection() {
           />
         </div>
 
-        <div className="text-lg text-gray-300 max-w-lg">
+        <div className="text-base md:text-lg text-gray-300 max-w-lg">
           <TextType
             text={[
               "We are a new-age policy, campaign, and strategy practice that blends human understanding with data intelligence to design change that matters.",
@@ -67,6 +67,22 @@ export default function HeroSection() {
             showCursor={true}
             cursorCharacter="|"
           />
+        </div>
+
+        {/* CTA BUTTONS */}
+        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+          <a
+            href="#learn-more"
+            className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 text-center"
+          >
+            Learn More
+          </a>
+          <a
+            href="#get-started"
+            className="px-6 py-3 border-2 border-white text-white font-semibold rounded-lg shadow-lg hover:bg-white hover:text-black transition-all duration-300 text-center"
+          >
+            Get Started
+          </a>
         </div>
 
         <div className="relative mt-5">
@@ -82,7 +98,7 @@ export default function HeroSection() {
       </div>
 
       {/* RIGHT IMAGE STACK */}
-      <div className="hidden md:flex w-1/2 h-full relative justify-center items-center">
+      <div className="hidden md:flex w-1/2 h-full relative justify-center items-center mt-10 md:mt-0">
         {IMAGES.map((img, index) => {
           const { x, y, rotate } = OFFSETS[index];
           const isTop = index === currentIndex;
@@ -99,7 +115,7 @@ export default function HeroSection() {
                 x,
                 y,
                 rotate,
-                opacity: isTop ? 1 : 0.6, // slightly faded for background images
+                opacity: isTop ? 1 : 0.6,
               }}
               transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
             />
