@@ -12,7 +12,7 @@ export default function ClientLayoutWrapper({
     <div
       className="relative min-h-screen"
       style={{
-        backgroundImage: "url('./background.jpg')",
+        background:'black',
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

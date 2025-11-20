@@ -125,7 +125,7 @@ export default function HeroSection() {
       </div>
 
       {/* TRUE FOCUS COMPONENT AT BOTTOM */}
-      <div className="w-full flex justify-center mt-16 md:mt-20">
+      <div className="w-full flex justify-center text-gray-400 mt-16 md:mt-20">
         <TrueFocus
           sentence="Paper Theory"
           manualMode={false}
