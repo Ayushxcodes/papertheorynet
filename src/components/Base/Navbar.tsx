@@ -19,8 +19,8 @@ const NavApp = () => {
       textColor: "#fff",
       links: [
         {
-          label: "Featured",
-          href: "/featured",
+          label: "Gallery",
+          href: "/gallery",
           ariaLabel: "Featured Projects",
         },
         {
