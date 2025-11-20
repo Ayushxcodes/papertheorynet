@@ -2,6 +2,7 @@
 import CircularGallerySection from "@/components/Landing/CircularGallerySection";
 import SimpleHero from "@/components/Landing/HeroSection";
 import ServicesCardSwap from "@/components/Landing/PolicySection";
+import Hero from "@/components/Landing/TickerSection";
 import React from "react";
 
 const Homepage = () => {
@@ -19,6 +20,7 @@ const Homepage = () => {
       <SimpleHero />
       <CircularGallerySection />
       <ServicesCardSwap />
+      <Hero/>
     </div>
   );
 };
